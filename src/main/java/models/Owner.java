@@ -5,10 +5,10 @@ import java.util.List;
 
 public class Owner {
     private int id;
-    private String firstName;
-    private String lastName;
+    private String prenom;
+    private String nom;
     private String address;
-    private String city;
+    private String ville;
     private String phone;
     private String email;
     private List<Pet> pets;
@@ -17,18 +17,17 @@ public class Owner {
         this.pets = new ArrayList<>();
     }
 
-    public Owner(int id, String firstName, String lastName, String address, String city, String phone, String email) {
+    public Owner(int id, String prenom, String nom, String address, String ville, String phone, String email) {
         this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.prenom = prenom;
+        this.nom = nom;
         this.address = address;
-        this.city = city;
+        this.ville = ville;
         this.phone = phone;
         this.email = email;
         this.pets = new ArrayList<>();
     }
 
-    // Getters and Setters
     public int getId() {
         return id;
     }
@@ -37,20 +36,20 @@ public class Owner {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getPrenom() {
+        return prenom;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getNom() {
+        return nom;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setNom(String nom) {
+        this.nom = nom;
     }
 
     public String getAddress() {
@@ -61,20 +60,20 @@ public class Owner {
         this.address = address;
     }
 
-    public String getCity() {
-        return city;
+    public String getVille() {
+        return ville;
     }
 
-    public void setCity(String city) {
-        this.city = city;
+    public void setVille(String ville) {
+        this.ville = ville;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getTelephone() {
+        return telephone;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
     }
 
     public String getEmail() {
@@ -103,6 +102,9 @@ public class Owner {
 
     @Override
     public String toString() {
-        return firstName + " " + lastName;
+        return "Owner{" +
+                "prenom='" + prenom + '\'' +
+                ", nom='" + nom + '\'' +
+                '}';
     }
 }
