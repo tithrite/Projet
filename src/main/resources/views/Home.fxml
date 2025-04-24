@@ -47,7 +47,6 @@
             </VBox>
         </HBox>
         
-        <!-- Cartes de fonctionnalités -->
         <HBox alignment="CENTER" spacing="20" HBox.hgrow="ALWAYS">
             <VBox style="-fx-background-color: white; -fx-padding: 15; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 3);" HBox.hgrow="ALWAYS">
                 <ImageView fitHeight="120" preserveRatio="true">
@@ -65,7 +64,6 @@
             </VBox>
         </HBox>
 
-        <!-- Boutons d'action -->
         <HBox alignment="CENTER" spacing="15">
             <Button text="Nouveau Propriétaire" onAction="#navigateToNewOwner" style="-fx-background-color: #111459; -fx-text-fill: white; -fx-padding: 10 20; -fx-font-weight: bold;" />
             <Button text="Nouvel Animal" onAction="#navigateToNewPet" style="-fx-background-color: #111459; -fx-text-fill: white; -fx-padding: 10 20; -fx-font-weight: bold;" />
