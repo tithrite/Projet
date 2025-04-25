@@ -5,25 +5,25 @@ import java.util.List;
 
 public class Veterinarian {
     private int id;
-    private String firstName;
-    private String lastName;
-    private String speciality;
-    private String phone;
+    private String prenom;
+    private String nom;
+    private String specialite;
+    private String telephone;
     private String email;
-    private List<Visit> visits;
+    private List<Visit> visites;
 
     public Veterinarian() {
         this.visits = new ArrayList<>();
     }
 
-    public Veterinarian(int id, String firstName, String lastName, String speciality, String phone, String email) {
+    public Veterinarian(int id, String prenom, String nom, String specialite, String telephone, String email) {
         this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.speciality = speciality;
-        this.phone = phone;
+        this.prenom = prenom;
+        this.nom = nom;
+        this.specialite = specialite;
+        this.telephone = telephone;
         this.email = email;
-        this.visits = new ArrayList<>();
+        this.visites = new ArrayList<>();
     }
 
     // Getters and Setters
@@ -35,36 +35,36 @@ public class Veterinarian {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getPrenom() {
+        return prenom;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getNom() {
+        return nom;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setNom(String nom) {
+        this.nom = nom;
     }
 
-    public String getSpeciality() {
-        return speciality;
+    public String getSpecialite() {
+        return specialite;
     }
 
-    public void setSpeciality(String speciality) {
-        this.speciality = speciality;
+    public void setSpecialite(String specialite) {
+        this.specialite = specialite;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getTelephone() {
+        return telephone;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
     }
 
     public String getEmail() {
@@ -75,24 +75,24 @@ public class Veterinarian {
         this.email = email;
     }
 
-    public List<Visit> getVisits() {
-        return visits;
+    public List<Visit> getVisites() {
+        return visites;
     }
 
-    public void setVisits(List<Visit> visits) {
-        this.visits = visits;
+    public void setVisites(List<Visit> visites) {
+        this.visites = visites;
     }
 
-    public void addVisit(Visit visit) {
-        visits.add(visit);
+    public void ajouterVisit(Visit visite) {
+        visites.add(visite);
     }
 
-    public void removeVisit(Visit visit) {
-        visits.remove(visit);
+    public void suprimerVisit(Visit visite) {
+        visites.remove(visite);
     }
 
     @Override
     public String toString() {
-        return "Dr. " + firstName + " " + lastName + " (" + speciality + ")";
+        return "Dr. " + prenom + " " + nom + " (" + specialite + ")";
     }
 }
