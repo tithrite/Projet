@@ -4,20 +4,24 @@ import java.time.LocalDateTime;
 
 public class Visit {
     private int id;
-    private LocalDateTime date;
-    private String description;
-    private Pet pet;
-    private Veterinarian veterinarian;
+    private LocalDateTime dateHeure ;
+    private String motif;
+    private String diagnostic;
+    private String traitement;
+    private Pet animale;
+    private Veterinarian veterinaaire;
 
     public Visit() {
     }
 
-    public Visit(int id, LocalDateTime date, String description, Pet pet, Veterinarian veterinarian) {
+    public Visit(int id, LocalDateTime dateHeure, String motif, String diagnostic, String traitement, Pet animal, Veterinarian veterinaire) {
         this.id = id;
-        this.date = date;
-        this.description = description;
-        this.pet = pet;
-        this.veterinarian = veterinarian;
+        this.dateHeure = dateHeure;
+        this.motif = motif;
+        this.diagnostic = diagnostic;
+        this.traitement = traitement;
+        this.animale = animal;
+        this.veterinaire = veterinaire;
     }
 
     // Getters and Setters
@@ -30,39 +34,56 @@ public class Visit {
     }
 
     public LocalDateTime getDate() {
-        return date;
+        return dateHeure;
     }
 
-    public void setDate(LocalDateTime date) {
-        this.date = date;
+    public void setDateHeure(LocalDateTime dateHeure) {
+        this.dateHeure = dateHeure;
     }
 
-    public String getDescription() {
-        return description;
+   public String getMotif() {
+        return motif;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setMotif(String motif) {
+        this.motif = motif;
     }
 
-    public Pet getPet() {
-        return pet;
+    public String getDiagnostic() {
+        return diagnostic;
     }
 
-    public void setPet(Pet pet) {
-        this.pet = pet;
+    public void setDiagnostic(String diagnostic) {
+        this.diagnostic = diagnostic;
     }
 
-    public Veterinarian getVeterinarian() {
-        return veterinarian;
+    public String getTraitement() {
+        return traitement;
     }
 
-    public void setVeterinarian(Veterinarian veterinarian) {
-        this.veterinarian = veterinarian;
+    public void setTraitement(String traitement) {
+        this.traitement = traitement;
+    }
+
+
+    public Pet getAnimal() {
+        return Animal;
+    }
+
+    public void setAnimal(Pet animal) {
+        this.animal = animal;
+    }
+
+    public Veterinarian getVeterinaire() {
+        return veterinaire;
+    }
+
+    public void setVeterinarian(Veterinarian veterinaire) {
+        this.veterinarian = veterinaire;
     }
 
     @Override
     public String toString() {
-        return "Visite du " + date.toLocalDate() + " - " + description;
+        return "Visite du " + dateheure.toLocalDate() + " - " + motif;
     }
 }
